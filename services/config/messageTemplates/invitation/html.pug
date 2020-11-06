@@ -1,0 +1,7 @@
+doctype html
+html(lang="en")
+body
+    - let salutation = user.firstName ? " " + user.firstName : "";
+    h2 Hi#{salutation},
+    p #{message.params.fromUser.firstName} invited you to join #{message.params.project.name} project.
+    a(href=webserver + "/invitation" + urlParams) Click here to check invitation.

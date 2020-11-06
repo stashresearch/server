@@ -1,0 +1,80 @@
+{
+  "name": "stash-server",
+  "version": "1.0.0",
+  "description": "My Moleculer microservices project",
+  "scripts": {
+    "dev": "moleculer-runner --repl --envfile development.env",
+    "start": "moleculer-runner --envfile production.env",
+    "cli": "moleculer connect NATS",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint services",
+    "dc:up": "docker-compose up --build -d",
+    "dc:down": "docker-compose down"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
+    "moleculer-repl": "^0.6.2",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.0.6",
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "bluebird": "^3.7.2",
+    "cron-parser": "^2.13.0",
+    "crypto": "^1.0.1",
+    "csv-parse": "^4.8.8",
+    "csv-string": "^4.0.1",
+    "datalib": "^1.9.2",
+    "dotenv": "^8.2.0",
+    "email-templates": "^7.0.4",
+    "fs-extra": "^9.0.0",
+    "github-api": "^3.3.0",
+    "googleapis": "^64.0.0",
+    "install": "^0.13.0",
+    "json-2-csv": "^3.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "md5": "^2.2.1",
+    "mime": "^2.4.4",
+    "mimelib": "^0.3.1",
+    "mkdirp": "^1.0.3",
+    "moleculer": "^0.14.3",
+    "moleculer-bull": "^0.2.5",
+    "moleculer-db": "^0.8.9",
+    "moleculer-db-adapter-mongoose": "^0.8.7",
+    "moleculer-web": "^0.9.1",
+    "mongoose": "^5.9.10",
+    "nats": "^1.4.2",
+    "npm": "^7.0.8",
+    "object-hash": "^2.0.3",
+    "openpgp": "^4.10.7",
+    "papaparse": "^5.3.0",
+    "pug": "^2.0.4",
+    "redis": "^3.0.2",
+    "serve-static": "^1.14.1",
+    "sharp": "^0.25.2",
+    "simple-git": "^1.131.0",
+    "stream-transform": "^2.0.1",
+    "uuid": "^3.4.0"
+  },
+  "engines": {
+    "node": ">= 8.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}

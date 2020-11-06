@@ -1,0 +1,6 @@
+doctype html
+html(lang="en")
+body
+    - let salutation = user.firstName ? " " + user.firstName : "";
+    h2 Hi#{salutation},
+    a(href=webserver + "/reset_password/" + urlParamsObj.token) Click here to reset password.
